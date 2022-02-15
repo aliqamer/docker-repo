@@ -1,0 +1,9 @@
+FROM openjdk:17-jdk-alpine
+MAINTAINER Qamer Ali
+
+
+RUN apk add gcc musl-dev python3-dev libffi-dev openssl-dev cargo py-pip
+#RUN apk add gcc musl-dev  python3-dev libffi-dev cargo py-pip
+RUN pip install --upgrade pip credstash
+
+CMD ["credstash"]
